@@ -1,0 +1,25 @@
+package templates
+
+import "github.com/dixxe/learnbackend/resources/static/styling"
+
+templ IndexPage() {
+    @BasicPageBlock()
+    
+    <h1 class={ styling.FileHeader() }>DixxeWEB-2.0!</h1>
+    <hr>
+    
+    <div class={ styling.Textcontainer() }>
+        <h2 class={ styling.Header() }>Информейшн</h2>
+        <p>
+            <span> Это новая версия моего сайта, которую я полностью переписал на</span>
+            <a href="https://go.dev/">Go.</a>
+            <span>
+                Версия на джаве требует слишком большого количества обслуживания
+                поэтому я решился переписать все на легкий язык, и, тем самым,
+                попрактиковаться на нем. Джава версия сайта будет исключительно
+                для практики. Основным сайтом является этот.
+            
+            </span>
+        </p>
+    </div>
+}

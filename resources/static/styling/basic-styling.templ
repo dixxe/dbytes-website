@@ -1,0 +1,34 @@
+package styling
+
+/*
+    In this file I write main CSS for all webpages.
+    Also I store there some variables that I use a lot.
+*/
+
+
+var mainColor = "#ffb37f"
+var bgColor = "#272727"
+var contrastColor = "#b37fff" // Contrast to mainColor
+
+css FileHeader() {
+    color: { mainColor };
+    text-align: center;
+}
+
+css Header() {
+    color: { mainColor };
+    text-align: left;
+}
+
+css HighlightText() {
+    color: { contrastColor };
+    font-weight: bold;
+}
+
+css Textcontainer() {
+    block-size: fit-content;
+    padding: 5px;
+    margin: 20px;
+    text-wrap: wrap;
+    color: white;
+}
