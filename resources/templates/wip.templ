@@ -1,0 +1,13 @@
+package templates
+
+import "github.com/dixxe/dweb-personal-website/resources/static/styling"
+
+templ WIPPage() {
+    @BasicPageBlock()
+    
+    <div class={ styling.Textcontainer(), styling.CenterContainer() }>
+        <h1 class={ styling.Header() }>В процессе</h1>
+        <p> Данная страница еще не готова. </p>
+        <p class={ styling.PostScriptum() }> Вернуться <a href="/">Домой</a> </p>
+    </div>
+}

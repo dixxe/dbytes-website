@@ -1,0 +1,20 @@
+package templates
+
+import "github.com/dixxe/dweb-personal-website/resources/static/styling"
+
+templ GreetPage(greeting string) {
+    @BasicPageBlock()
+
+    <h1 class={ styling.FileHeader() }> Протестируй мой бекенд </h1>
+    <p class={ styling.PostScriptum() }> Вернуться <a href="/">Домой</a> </p>
+    
+    <div class={ styling.Textcontainer() }>
+        <p class={ styling.HighlightText() }> {greeting} </p>
+        <p>
+            <span>
+            Сайт может тебя приветствовать! Попробуй поменять ссылку например
+            </span>
+            <span class={ styling.HighlightText() }>/greet/joe</span>
+        </p>
+    </div>
+}
