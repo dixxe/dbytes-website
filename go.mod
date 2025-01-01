@@ -1,4 +1,4 @@
-module github.com/dixxe/learnbackend
+module github.com/dixxe/dweb-personal-website
 
 go 1.23.2
 

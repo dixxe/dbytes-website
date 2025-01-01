@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/dixxe/learnbackend/service/controllers"
+	"github.com/dixxe/dweb-personal-website/service/controllers"
 )
 
 func main() {
