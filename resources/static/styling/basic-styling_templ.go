@@ -76,4 +76,20 @@ func PostScriptum() templ.CSSClass {
 	}
 }
 
+func CenterContainer() templ.CSSClass {
+	templ_7745c5c3_CSSBuilder := templruntime.GetBuilder()
+	templ_7745c5c3_CSSBuilder.WriteString(`padding:15px;`)
+	templ_7745c5c3_CSSBuilder.WriteString(`position:absolute;`)
+	templ_7745c5c3_CSSBuilder.WriteString(`top:50%;`)
+	templ_7745c5c3_CSSBuilder.WriteString(`left:50%;`)
+	templ_7745c5c3_CSSBuilder.WriteString(`-ms-transform:translateX(-50%) translateY(-50%);`)
+	templ_7745c5c3_CSSBuilder.WriteString(`-webkit-transform:translate(-50%,-50%);`)
+	templ_7745c5c3_CSSBuilder.WriteString(`transform:translate(-50%,-50%);`)
+	templ_7745c5c3_CSSID := templ.CSSID(`CenterContainer`, templ_7745c5c3_CSSBuilder.String())
+	return templ.ComponentCSSClass{
+		ID:    templ_7745c5c3_CSSID,
+		Class: templ.SafeCSS(`.` + templ_7745c5c3_CSSID + `{` + templ_7745c5c3_CSSBuilder.String() + `}`),
+	}
+}
+
 var _ = templruntime.GeneratedTemplate
