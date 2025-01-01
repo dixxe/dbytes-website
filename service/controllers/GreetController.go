@@ -8,7 +8,7 @@ import (
 	"github.com/go-chi/chi/v5"
 )
 
-func GreetController(w http.ResponseWriter, r *http.Request) {
+func GetProcessGreet(w http.ResponseWriter, r *http.Request) {
 	nameToGreet := chi.URLParam(r, "name")
 	if nameToGreet == "" {
 		nameToGreet = "мир"

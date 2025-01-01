@@ -7,7 +7,7 @@ import (
 	"github.com/dixxe/dweb-personal-website/resources/templates"
 )
 
-func IndexHandler(w http.ResponseWriter, r *http.Request) {
+func GetIndexHandler(w http.ResponseWriter, r *http.Request) {
 	component := templates.IndexPage()
 	component.Render(context.Background(), w)
 }

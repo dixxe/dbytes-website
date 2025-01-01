@@ -1,0 +1,19 @@
+package templates
+
+import "github.com/dixxe/dweb-personal-website/service"
+import "github.com/dixxe/dweb-personal-website/resources/static/styling"
+
+templ ShowBlogPage(posts []service.Post) {
+    @BasicPageBlock()
+    
+    <h1 class={ styling.FileHeader() }>Блог дихуса</h1>
+    <p class={ styling.PostScriptum() }> Вернуться <a href="/">Домой</a> </p>
+    <hr>
+
+    for _, post := range posts {
+        <div class={ styling.Textcontainer(), styling.BlogContainer() }>
+            <h1 class={ styling.Header() }> {post.Header} </h1>
+            <p> {post.Content} </p>
+        </div>
+    }
+}

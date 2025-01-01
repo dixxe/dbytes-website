@@ -15,7 +15,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 var mainColor = "#ffb37f"
 var bgColor = "#272727"
-var contrastColor = "#b37fff" // Contrast to mainColor
+var contrastColor = "#5f8bf9" // Contrast to mainColor
 
 func FileHeader() templ.CSSClass {
 	templ_7745c5c3_CSSBuilder := templruntime.GetBuilder()
@@ -58,6 +58,16 @@ func Textcontainer() templ.CSSClass {
 	templ_7745c5c3_CSSBuilder.WriteString(`text-wrap:wrap;`)
 	templ_7745c5c3_CSSBuilder.WriteString(`color:white;`)
 	templ_7745c5c3_CSSID := templ.CSSID(`Textcontainer`, templ_7745c5c3_CSSBuilder.String())
+	return templ.ComponentCSSClass{
+		ID:    templ_7745c5c3_CSSID,
+		Class: templ.SafeCSS(`.` + templ_7745c5c3_CSSID + `{` + templ_7745c5c3_CSSBuilder.String() + `}`),
+	}
+}
+
+func BlogContainer() templ.CSSClass {
+	templ_7745c5c3_CSSBuilder := templruntime.GetBuilder()
+	templ_7745c5c3_CSSBuilder.WriteString(`border:2px dashed gray;`)
+	templ_7745c5c3_CSSID := templ.CSSID(`BlogContainer`, templ_7745c5c3_CSSBuilder.String())
 	return templ.ComponentCSSClass{
 		ID:    templ_7745c5c3_CSSID,
 		Class: templ.SafeCSS(`.` + templ_7745c5c3_CSSID + `{` + templ_7745c5c3_CSSBuilder.String() + `}`),

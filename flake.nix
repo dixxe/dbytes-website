@@ -18,6 +18,8 @@
 					gopls
 					templ
 				];
+				
+				hardeningDisable = [ "fortify" ];
 
 				shellHook = "echo Welcome to go-backend environment";
 			};
