@@ -64,4 +64,16 @@ func Textcontainer() templ.CSSClass {
 	}
 }
 
+func PostScriptum() templ.CSSClass {
+	templ_7745c5c3_CSSBuilder := templruntime.GetBuilder()
+	templ_7745c5c3_CSSBuilder.WriteString(`text-align:center;`)
+	templ_7745c5c3_CSSBuilder.WriteString(`font-size:12px;`)
+	templ_7745c5c3_CSSBuilder.WriteString(string(templ.SanitizeCSS(`color`, contrastColor)))
+	templ_7745c5c3_CSSID := templ.CSSID(`PostScriptum`, templ_7745c5c3_CSSBuilder.String())
+	return templ.ComponentCSSClass{
+		ID:    templ_7745c5c3_CSSID,
+		Class: templ.SafeCSS(`.` + templ_7745c5c3_CSSID + `{` + templ_7745c5c3_CSSBuilder.String() + `}`),
+	}
+}
+
 var _ = templruntime.GeneratedTemplate
