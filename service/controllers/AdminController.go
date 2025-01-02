@@ -6,11 +6,13 @@ import (
 	"os"
 
 	"github.com/dixxe/dweb-personal-website/resources/templates"
+	"github.com/dixxe/dweb-personal-website/service/repositories"
 	"github.com/joho/godotenv"
 )
 
 func GetAdminPanel(w http.ResponseWriter, r *http.Request) {
-	component := templates.AdminPanelPage()
+	posts := repositories.Blog.GetAllValues()
+	component := templates.AdminPanelPage(posts)
 	component.Render(context.Background(), w)
 }
 

@@ -8,10 +8,10 @@ package templates
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github.com/dixxe/dweb-personal-website/service"
 import "github.com/dixxe/dweb-personal-website/resources/static/styling"
+import "github.com/dixxe/dweb-personal-website/service/repositories"
 
-func ShowBlogPage(posts []service.Post) templ.Component {
+func ShowBlogPage(posts []repositories.Post) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {

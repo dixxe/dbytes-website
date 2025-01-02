@@ -1,8 +1,31 @@
 package templates
 
 import "github.com/dixxe/dweb-personal-website/resources/static/styling"
+import "strconv"
+import "github.com/dixxe/dweb-personal-website/service/repositories"
 
-templ AdminPanelPage() {
+templ postsTable(blogPosts []repositories.Post) {
+    <table class={ styling.DefaultTable() }>
+    <thead>
+        <tr>
+        <th> ID </th>
+        <th> Header </th>
+        <th> Content </th>
+        </tr>
+    </thead>
+    <tbody>
+    for _, post := range blogPosts {
+    <tr>
+        <td><span> {strconv.Itoa(post.Id)} </span></td>
+        <td><span> {post.Header} </span></td>
+        <td><span> {post.Content} </span></td>
+    </tr>
+    }
+    </tbody>
+    </table>
+}
+
+templ AdminPanelPage(blogPosts []repositories.Post) {
     @BasicPageBlock()
 
     <h1 class={ styling.FileHeader() }>Очень защищенная админ-панель</h1>
@@ -25,6 +48,9 @@ templ AdminPanelPage() {
     </form>
 
     </div> 
+
+    <hr>
+    @postsTable(blogPosts)
 }
 
 templ LoginPage() {

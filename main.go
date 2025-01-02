@@ -1,5 +1,9 @@
 package main
 
+/*
+	Main file with routes and nothing else.
+*/
+
 import (
 	"net/http"
 

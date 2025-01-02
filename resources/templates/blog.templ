@@ -1,9 +1,9 @@
 package templates
 
-import "github.com/dixxe/dweb-personal-website/service"
 import "github.com/dixxe/dweb-personal-website/resources/static/styling"
+import "github.com/dixxe/dweb-personal-website/service/repositories"
 
-templ ShowBlogPage(posts []service.Post) {
+templ ShowBlogPage(posts []repositories.Post) {
     @BasicPageBlock()
     
     <h1 class={ styling.FileHeader() }>Блог дихуса</h1>
