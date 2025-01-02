@@ -14,9 +14,10 @@
     devShells.${system} = {
 		  default = pkgs.mkShell {
 			  nativeBuildInputs = with pkgs; [
-				  	go
+				  go
 					gopls
 					templ
+					bashInteractive
 				];
 				
 				hardeningDisable = [ "fortify" ];

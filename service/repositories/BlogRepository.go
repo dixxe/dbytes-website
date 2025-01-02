@@ -1,6 +1,6 @@
 /*
 	Managing blogs database with a little bit awful execution.
-	This is can be considered as any-service database example.
+	This is can be considered as any-repository database example.
 	In this realisation database is *always* stays open after xxxService defintion.
 	Because if something close it the struct will point to nothing and
 	obviously this is bad.
@@ -20,7 +20,7 @@ var database_name = "blogs.db" // You can change it if you want.
 
 // Defining it to use it later via service.Blog
 // Why here? Because it's best place for any-blog related!
-var Blog blogService = blogService{Database: service.OpenDb(database_name)}
+var Blog blogRepository = blogRepository{Database: service.OpenDb(database_name)}
 
 // Post structure for database field.
 type Post struct {
@@ -30,11 +30,11 @@ type Post struct {
 }
 
 // This struct implemets Repository[Post]
-type blogService struct {
+type blogRepository struct {
 	Database *sql.DB
 }
 
-func (blogs blogService) GetAllValues() []Post {
+func (blogs blogRepository) GetAllValues() []Post {
 	db := blogs.Database
 	//defer db.Close()
 
@@ -60,7 +60,7 @@ func (blogs blogService) GetAllValues() []Post {
 	return posts
 }
 
-func (blogs blogService) GetValueByID(id int) Post {
+func (blogs blogRepository) GetValueByID(id int) Post {
 	db := blogs.Database
 	//defer db.Close()
 
@@ -75,7 +75,7 @@ func (blogs blogService) GetValueByID(id int) Post {
 	return p
 }
 
-func (blogs blogService) DeleteValueByID(id int) {
+func (blogs blogRepository) DeleteValueByID(id int) {
 	db := blogs.Database
 	//defer db.Close()
 
@@ -88,7 +88,7 @@ func (blogs blogService) DeleteValueByID(id int) {
 }
 
 // Returning last inserted id
-func (blogs blogService) InsertValue(postToInsert Post) int {
+func (blogs blogRepository) InsertValue(postToInsert Post) int {
 	db := blogs.Database
 	//defer db.Close()
 
