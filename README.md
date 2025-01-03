@@ -10,5 +10,7 @@ To start website you need to:
 - Create blogs.db database and populate it with `initdb()` method.
 
 ## ToDo
-- [ ] Comments and code refactoring
+- [x] Comments and code refactoring
 - [ ] Comments and likes for blog 
+- [ ] Team assets (todo list, members, joining form)
+- [ ] Better frontend

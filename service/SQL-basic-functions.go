@@ -1,3 +1,7 @@
+/*
+Some SQL tools to reduce boilerplate.
+Probably will be rewritten in future.
+*/
 package service
 
 import (
@@ -16,7 +20,7 @@ func OpenDb(database_name string) *sql.DB {
 }
 
 // I don't know a way how to automate this process.
-func initDb(db *sql.DB) {
+func InitDb(db *sql.DB) {
 	//defer db.Close()
 
 	_, err := db.Exec(`

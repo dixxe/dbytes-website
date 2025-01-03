@@ -1,9 +1,8 @@
 /*
-	Managing blogs database with a little bit awful execution.
-	This is can be considered as any-repository database example.
-	In this realisation database is *always* stays open after xxxRepository defintion.
-	Because if something close it the struct will point to nothing and
-	obviously this is bad.
+Managing blogRepo database with a little bit awful execution.
+This can be considered as any-repository database example.
+In this realisation database is *always* stays open after xxxRepository intitialization.
+Because if something close it the struct will point to nothing and obviously this is bad.
 */
 
 package repositories
@@ -18,8 +17,8 @@ import (
 
 var database_name = "blogs.db" // You can change it if you want.
 
-// Defining it to use it later via service.Blog
-// Why here? Because it's best place for any-blog related!
+// Defining it to use it later via repository.Blog
+// Why here? Because it's best place for anything blog related!
 var Blog blogRepository = blogRepository{Database: service.OpenDb(database_name)}
 
 // Post structure for database field.
@@ -34,8 +33,8 @@ type blogRepository struct {
 	Database *sql.DB
 }
 
-func (blogs blogRepository) GetAllValues() []Post {
-	db := blogs.Database
+func (blogRepo blogRepository) GetAllValues() []Post {
+	db := blogRepo.Database
 	//defer db.Close()
 
 	rows, err := db.Query("SELECT * from blogs")
@@ -60,8 +59,8 @@ func (blogs blogRepository) GetAllValues() []Post {
 	return posts
 }
 
-func (blogs blogRepository) GetValueByID(id int) Post {
-	db := blogs.Database
+func (blogRepo blogRepository) GetValueByID(id int) Post {
+	db := blogRepo.Database
 	//defer db.Close()
 
 	row := db.QueryRow("SELECT * from blogs where id = ?", id)
@@ -75,8 +74,8 @@ func (blogs blogRepository) GetValueByID(id int) Post {
 	return p
 }
 
-func (blogs blogRepository) DeleteValueByID(id int) {
-	db := blogs.Database
+func (blogRepo blogRepository) DeleteValueByID(id int) {
+	db := blogRepo.Database
 	//defer db.Close()
 
 	_, err := db.Exec("DELETE from blogs where id = ?", id)
@@ -88,8 +87,8 @@ func (blogs blogRepository) DeleteValueByID(id int) {
 }
 
 // Returning last inserted id
-func (blogs blogRepository) InsertValue(postToInsert Post) int {
-	db := blogs.Database
+func (blogRepo blogRepository) InsertValue(postToInsert Post) int {
+	db := blogRepo.Database
 	//defer db.Close()
 
 	result, err := db.Exec("INSERT into blogs (header, content) values (?,?)",
@@ -102,4 +101,20 @@ func (blogs blogRepository) InsertValue(postToInsert Post) int {
 	id, _ := result.LastInsertId()
 
 	return int(id)
+}
+
+func (blogRepo blogRepository) ExecSpecific(SQL_command string) sql.Result {
+	result, err := blogRepo.Database.Exec(SQL_command)
+	if err != nil {
+		fmt.Println(err)
+	}
+	return result
+}
+
+func (blogRepo blogRepository) QuerySpecific(SQL_command string) *sql.Rows {
+	result, err := blogRepo.Database.Query(SQL_command)
+	if err != nil {
+		fmt.Println(err)
+	}
+	return result
 }

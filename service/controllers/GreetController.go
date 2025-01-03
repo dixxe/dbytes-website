@@ -1,3 +1,8 @@
+/*
+Simple controller that I wrote first for practice.
+It serves as example for API routing,
+*/
+
 package controllers
 
 import (
@@ -10,7 +15,7 @@ import (
 
 func GetProcessGreet(w http.ResponseWriter, r *http.Request) {
 	nameToGreet := chi.URLParam(r, "name")
-	if nameToGreet == "" {
+	if nameToGreet == "" { // Placeholder for variable
 		nameToGreet = "мир"
 	}
 	greeting := "Привет " + nameToGreet + "!"

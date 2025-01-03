@@ -9,8 +9,10 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 /*
-   In this file I write main CSS for all webpages.
-   Also I store there some variables that I use a lot.
+In this file I write main CSS for all webpages.
+Also I store there some variables that I use a lot.
+Currently all elements are not sorted.
+Be aware that class names in final html page will be random.
 */
 
 var mainColor = "#ffb37f"
@@ -90,7 +92,7 @@ func DefaultTable() templ.CSSClass {
 	templ_7745c5c3_CSSBuilder := templruntime.GetBuilder()
 	templ_7745c5c3_CSSBuilder.WriteString(`border-collapse:collapse;`)
 	templ_7745c5c3_CSSBuilder.WriteString(`border:1px solid;`)
-	templ_7745c5c3_CSSBuilder.WriteString(`width:50%;`)
+	templ_7745c5c3_CSSBuilder.WriteString(`color:white;`)
 	templ_7745c5c3_CSSID := templ.CSSID(`DefaultTable`, templ_7745c5c3_CSSBuilder.String())
 	return templ.ComponentCSSClass{
 		ID:    templ_7745c5c3_CSSID,
