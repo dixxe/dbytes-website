@@ -11,7 +11,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/dixxe/dweb-personal-website/service"
+	"github.com/dixxe/dbytes-website/service"
 	_ "modernc.org/sqlite"
 )
 

@@ -19,8 +19,8 @@ package templates
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github.com/dixxe/dweb-personal-website/resources/static/styling"
-import "github.com/dixxe/dweb-personal-website/service/repositories"
+import "github.com/dixxe/dbytes-website/resources/static/styling"
+import "github.com/dixxe/dbytes-website/service/repositories"
 
 func ShowBlogPage(posts []repositories.Post) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

@@ -13,8 +13,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/dixxe/dweb-personal-website/resources/templates"
-	"github.com/dixxe/dweb-personal-website/service/repositories"
+	"github.com/dixxe/dbytes-website/resources/templates"
+	"github.com/dixxe/dbytes-website/service/repositories"
 )
 
 func GetShowBlog(w http.ResponseWriter, r *http.Request) {

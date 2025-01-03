@@ -8,7 +8,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/dixxe/dweb-personal-website/resources/templates"
+	"github.com/dixxe/dbytes-website/resources/templates"
 )
 
 func GetIndexHandler(w http.ResponseWriter, r *http.Request) {

@@ -25,9 +25,9 @@ package templates
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github.com/dixxe/dweb-personal-website/resources/static/styling"
+import "github.com/dixxe/dbytes-website/resources/static/styling"
 import "strconv"
-import "github.com/dixxe/dweb-personal-website/service/repositories"
+import "github.com/dixxe/dbytes-website/service/repositories"
 
 // Template to reduce boilerplate and untie everything
 func postsTable(blogPosts []repositories.Post) templ.Component {

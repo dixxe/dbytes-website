@@ -7,7 +7,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/dixxe/dweb-personal-website/service/controllers"
+	"github.com/dixxe/dbytes-website/service/controllers"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 )

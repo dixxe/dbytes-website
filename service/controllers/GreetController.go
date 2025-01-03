@@ -9,7 +9,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/dixxe/dweb-personal-website/resources/templates"
+	"github.com/dixxe/dbytes-website/resources/templates"
 	"github.com/go-chi/chi/v5"
 )
 
