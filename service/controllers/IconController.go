@@ -14,7 +14,7 @@ import (
 
 func GetIcon(w http.ResponseWriter, r *http.Request) {
 	// This is relative path from main.go to image
-	icon, err := os.Open("./resources/static/images/icon.png")
+	icon, err := os.Open("./icon.png")
 	if err != nil {
 		fmt.Fprintln(w, err)
 	}
