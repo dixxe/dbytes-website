@@ -53,7 +53,7 @@ func IndexPage() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">DixxeWEB-2.0!</h1><hr>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">D-bytes headquarters</h1><hr>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -97,7 +97,7 @@ func IndexPage() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">Информейшн</h2><p><span>Это новая версия моего сайта, которую я полностью переписал на</span> <a href=\"https://go.dev/\">Go.</a> <span>Версия на джаве требует слишком большого количества обслуживания поэтому я решился переписать все на легкий язык, и, тем самым, попрактиковаться на нем. Джава версия сайта будет исключительно для практики. Основным сайтом является этот.</span></p></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">Информейшн</h2><p><span>Это новая версия моего сайта, которую я полностью переписал на</span> <a href=\"https://go.dev/\">Go.</a> <span>Версия на джаве требует слишком большого количества обслуживания поэтому я решился переписать все на легкий язык, и, тем самым, попрактиковаться на нем. Джава версия сайта будет исключительно для практики. Основным сайтом является этот.</span></p><p><span>Так как я хочу основать небольшую команду, пусть этот сайт станет отправной точкой. Сделал небольшой ребрендинг. Также совсем скоро я начну проплачивать постоянный айпи адрес и смогу хостить на более- менее собственном домене. Пока что название будет - D-bytes. Но думаю в будущем придумаем получше и что-то менее связанное с моим ником.. Скоро здесь появится список участников, дел и возможность подать заявку на вступление!</span></p></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -141,7 +141,7 @@ func IndexPage() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">Магия бекенда</h2><p>Проверка моих контроллеров <a href=\"/greet\">здесь.</a></p><p>Будущий блог на SQLite3 <a href=\"/blog\">здесь.</a></p></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">Магия бекенда</h2><p>Проверка моих контроллеров <a href=\"/greet\">здесь.</a></p><p>Будущий личный блог основателя на SQLite3 <a href=\"/blog\">здесь.</a></p></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

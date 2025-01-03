@@ -1,7 +1,7 @@
 /*
 	Managing blogs database with a little bit awful execution.
 	This is can be considered as any-repository database example.
-	In this realisation database is *always* stays open after xxxService defintion.
+	In this realisation database is *always* stays open after xxxRepository defintion.
 	Because if something close it the struct will point to nothing and
 	obviously this is bad.
 */

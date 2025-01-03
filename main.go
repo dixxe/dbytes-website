@@ -27,5 +27,7 @@ func main() {
 
 	r.Post("/admin/login", controllers.PostAdminLogin)
 	r.Get("/admin", controllers.GetAdminLogin)
+
+	r.Get("/icon.png", controllers.GetIcon)
 	http.ListenAndServe(":8080", r)
 }
