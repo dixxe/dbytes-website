@@ -1,5 +1,5 @@
-# DWEB
-Dixxe-WEB is mine personal website where I practice my backend and frontend skills.
+# D-bytes
+D-bytes is a website for my team which used as headquarters.
 This project is open source and it's always will be that way.
 
 ## Can I use this website?
